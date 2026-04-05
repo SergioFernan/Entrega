@@ -1,0 +1,105 @@
+.pageMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.25rem 0;
+}
+
+.pageHero {
+    position: relative;
+    width: 100%;
+    padding: 2.5rem;
+    border: 1px solid rgba(133, 165, 255, 0.2);
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(5, 12, 28, 0.18);
+    color: #dbe5ff;
+}
+
+.indexHero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 540px;
+    padding: 3rem;
+    background:
+        linear-gradient(90deg, rgba(8, 15, 32, 0.84) 0%, rgba(8, 15, 32, 0.66) 42%, rgba(8, 15, 32, 0.24) 100%),
+        linear-gradient(180deg, rgba(8, 15, 32, 0.18) 0%, rgba(8, 15, 32, 0.52) 100%),
+        url("/images/fondos main/fondo primera seccion.png") center/cover no-repeat;
+}
+
+.pageEyebrow,
+.pageTitle,
+.pageDescription {
+    position: relative;
+    z-index: 1;
+}
+
+.pageEyebrow {
+    margin-bottom: 0.9rem;
+    font-family: "BebasNeueCustom", sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    color: #d9e5ff;
+    text-align: left;
+}
+
+.pageTitle {
+    max-width: 11ch;
+    margin: 0 0 1.1rem;
+    font-size: clamp(2rem, 3vw, 3.4rem);
+    line-height: 1.05;
+    color: #f4f7ff;
+    text-align: left;
+    text-wrap: balance;
+}
+
+.pageDescription {
+    max-width: 52ch;
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #e3ebff;
+    text-align: left;
+}
+
+@media (min-width: 1440px) {
+    .indexHero {
+        min-height: 620px;
+        padding: 3.5rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .pageMain {
+        padding: 1.5rem 0;
+    }
+
+    .pageHero {
+        padding: 2rem 1.25rem;
+        border-radius: 20px;
+    }
+
+    .indexHero {
+        min-height: 420px;
+        background:
+            linear-gradient(180deg, rgba(8, 15, 32, 0.78) 0%, rgba(8, 15, 32, 0.62) 52%, rgba(8, 15, 32, 0.7) 100%),
+            url("/images/fondos main/fondo primera seccion.png") center/cover no-repeat;
+    }
+
+    .pageEyebrow,
+    .pageTitle,
+    .pageDescription {
+        text-align: center;
+    }
+
+    .pageTitle,
+    .pageDescription {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pageDescription {
+        font-size: 1rem;
+    }
+}

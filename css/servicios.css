@@ -1,0 +1,62 @@
+.pageMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.25rem 0;
+}
+
+.pageHero {
+    width: 100%;
+    padding: 2.75rem 2.5rem;
+    background: linear-gradient(135deg, rgba(18, 35, 63, 0.96) 0%, rgba(11, 23, 48, 0.96) 100%);
+    border: 1px solid rgba(133, 165, 255, 0.2);
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(5, 12, 28, 0.18);
+    text-align: center;
+    color: #dbe5ff;
+}
+
+.pageEyebrow {
+    margin-bottom: 0.8rem;
+    font-family: "BebasNeueCustom", sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    color: #8db0ff;
+}
+
+.pageTitle {
+    max-width: 14ch;
+    margin: 0 auto 1rem;
+    font-size: clamp(2rem, 3vw, 3.35rem);
+    line-height: 1.05;
+    color: #f4f7ff;
+}
+
+.pageDescription {
+    max-width: 62ch;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #c0d0f8;
+}
+
+@media (min-width: 1440px) {
+    .pageHero {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .pageMain {
+        padding: 1.5rem 0;
+    }
+
+    .pageHero {
+        padding: 2rem 1.25rem;
+        border-radius: 20px;
+    }
+
+    .pageDescription {
+        font-size: 1rem;
+    }
+}
