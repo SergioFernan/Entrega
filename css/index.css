@@ -167,9 +167,102 @@
     color: #edf3ff;
 }
 
+.plansSection {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2.5rem 2.75rem;
+    background:
+        radial-gradient(circle at right center, rgba(87, 129, 255, 0.2) 0%, rgba(87, 129, 255, 0) 28%),
+        linear-gradient(135deg, rgba(18, 35, 63, 0.98) 0%, rgba(11, 23, 48, 0.95) 100%);
+}
+
+.plansContent {
+    max-width: 760px;
+}
+
+.plansEyebrow {
+    margin-bottom: 0.85rem;
+    font-family: "BebasNeueCustom", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.14em;
+    color: #9bb8ff;
+}
+
+.plansTitle {
+    max-width: 18ch;
+    margin: 0 0 1rem;
+    font-size: clamp(1.9rem, 3vw, 3rem);
+    line-height: 1.08;
+    color: #f4f7ff;
+    text-wrap: balance;
+}
+
+.plansDescription {
+    max-width: 58ch;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #d8e4ff;
+}
+
+.plansLink {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 190px;
+    padding: 1rem 1.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(155, 184, 255, 0.28);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(84, 123, 255, 0.18) 100%);
+    box-shadow: 0 16px 28px rgba(4, 10, 24, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    color: #f7f9ff;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.plansLinkText {
+    position: relative;
+    z-index: 1;
+    font-family: "BebasNeueCustom", sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.12em;
+}
+
+.plansLinkGlow {
+    position: absolute;
+    inset: -35%;
+    z-index: 0;
+    background:
+        conic-gradient(from 180deg, rgba(255, 255, 255, 0) 0deg, rgba(128, 169, 255, 0.08) 90deg, rgba(255, 255, 255, 0.58) 160deg, rgba(128, 169, 255, 0.08) 230deg, rgba(255, 255, 255, 0) 360deg);
+    transform: translateX(-68%) rotate(10deg);
+    transition: transform 0.65s ease;
+}
+
+.plansLink:hover,
+.plansLink:focus-visible {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(173, 197, 255, 0.56);
+    box-shadow: 0 22px 36px rgba(4, 10, 24, 0.34), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.plansLink:hover .plansLinkGlow,
+.plansLink:focus-visible .plansLinkGlow {
+    transform: translateX(68%) rotate(10deg);
+}
+
 @media (max-width: 980px) {
     .stackGrid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .plansSection {
+        grid-template-columns: 1fr;
+        justify-items: start;
     }
 }
 
@@ -238,5 +331,17 @@
 
     .stackGrid {
         grid-template-columns: 1fr;
+    }
+
+    .plansSection {
+        justify-items: center;
+        padding: 2rem 1.25rem;
+        text-align: center;
+    }
+
+    .plansTitle,
+    .plansDescription {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
