@@ -1,3 +1,38 @@
+@font-face {
+    font-family: "RubikCustom";
+    src: url("/fonts/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+    font-weight: 300 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "RubikCustom";
+    src: url("/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 300 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "BebasNeueCustom";
+    src: url("/fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DeliusCustom";
+    src: url("/fonts/Delius/Delius-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SmoochSansCustom";
+    src: url("/fonts/Smooch_Sans/SmoochSans-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,7 +51,7 @@
 
 body {
     min-height: 100vh;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "RubikCustom", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(180deg, #f7faff 0%, #eef4ff 100%);
     color: var(--brandInk);
 }
@@ -42,6 +77,7 @@ body {
     gap: 0.85rem;
     color: var(--brandInk);
     text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .brandLogoImage {
@@ -49,13 +85,33 @@ body {
     height: 54px;
     object-fit: contain;
     flex-shrink: 0;
+    transition: transform 0.25s ease, filter 0.25s ease;
 }
 
 .brandLogoText {
+    font-family: "BebasNeueCustom", sans-serif;
     font-size: 1.1rem;
-    font-weight: 800;
-    letter-spacing: 0.03em;
+    font-weight: 400;
+    letter-spacing: 0.08em;
     text-transform: capitalize;
+    transition: color 0.25s ease, letter-spacing 0.25s ease;
+}
+
+.brandLogo:hover,
+.brandLogo:focus-visible {
+    opacity: 0.96;
+}
+
+.brandLogo:hover .brandLogoImage,
+.brandLogo:focus-visible .brandLogoImage {
+    transform: translateY(-1px) scale(1.04);
+    filter: drop-shadow(0 6px 12px rgba(46, 107, 255, 0.16));
+}
+
+.brandLogo:hover .brandLogoText,
+.brandLogo:focus-visible .brandLogoText {
+    color: var(--brandBlueDark);
+    letter-spacing: 0.1em;
 }
 
 .headerNav {
@@ -75,22 +131,47 @@ body {
 }
 
 .navLink {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-family: "SmoochSansCustom", "RubikCustom", sans-serif;
+    font-size: 1.2rem;
     padding: 0.75rem 1.1rem;
     border-radius: 999px;
     color: var(--brandInk);
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    overflow: hidden;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+footer {
+    font-family: "DeliusCustom", "RubikCustom", sans-serif;
+}
+
+.navLink::after {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.45rem;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--brandBlue) 20%, var(--brandBlueDark) 80%, transparent 100%);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
 }
 
 .navLink:hover,
 .navLink:focus-visible {
-    background-color: var(--brandBlue);
-    color: var(--brandWhite);
+    color: var(--brandBlueDark);
     transform: translateY(-1px);
+}
+
+.navLink:hover::after,
+.navLink:focus-visible::after {
+    transform: scaleX(1);
 }
 
 main,
