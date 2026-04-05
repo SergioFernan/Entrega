@@ -25,7 +25,7 @@
     background:
         linear-gradient(90deg, rgba(8, 15, 32, 0.84) 0%, rgba(8, 15, 32, 0.66) 42%, rgba(8, 15, 32, 0.24) 100%),
         linear-gradient(180deg, rgba(8, 15, 32, 0.18) 0%, rgba(8, 15, 32, 0.52) 100%),
-        url("/images/fondos main/fondo primera seccion.png") center/cover no-repeat;
+        url("../images/fondos main/fondo primera seccion.png") center/cover no-repeat;
 }
 
 .pageEyebrow,
@@ -84,7 +84,7 @@
         min-height: 420px;
         background:
             linear-gradient(180deg, rgba(8, 15, 32, 0.78) 0%, rgba(8, 15, 32, 0.62) 52%, rgba(8, 15, 32, 0.7) 100%),
-            url("/images/fondos main/fondo primera seccion.png") center/cover no-repeat;
+            url("../images/fondos main/fondo primera seccion.png") center/cover no-repeat;
     }
 
     .pageEyebrow,
