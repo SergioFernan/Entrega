@@ -1,0 +1,16 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .circle { fill: none; stroke: #2E6BFF; stroke-width: 3; }
+    .line { stroke: #2E6BFF; stroke-width: 2.5; stroke-linecap: round; }
+  </style>
+
+  <!-- Círculos (Trinity) -->
+  <circle cx="60" cy="30" r="14" class="circle"></circle>
+  <circle cx="35" cy="80" r="14" class="circle"></circle>
+  <circle cx="85" cy="80" r="14" class="circle"></circle>
+
+  <!-- Conexiones armoniosas -->
+  <line x1="60" y1="30" x2="35" y2="80" class="line"></line>
+  <line x1="60" y1="30" x2="85" y2="80" class="line"></line>
+  <line x1="35" y1="80" x2="85" y2="80" class="line"></line>
+</svg>
