@@ -72,6 +72,7 @@ body {
     gap: 2rem;
     width: 100%;
     margin: 0;
+    /* Hace que el espacio lateral del header se adapte al ancho de la pantalla. */
     padding: 1rem clamp(1.25rem, 4vw, 2.5rem);
     background: linear-gradient(135deg, rgba(18, 35, 63, 0.72) 0%, rgba(11, 23, 48, 0.52) 100%);
     border-bottom: 1px solid rgba(133, 165, 255, 0.22);
@@ -204,6 +205,7 @@ main {
 .mainFooter {
     width: 100%;
     margin: 0;
+    /* Hace que el espacio lateral del footer se adapte al ancho de la pantalla. */
     padding: 1.75rem clamp(1.25rem, 4vw, 2.5rem) 1.5rem;
     background: linear-gradient(135deg, #12233f 0%, #0b1730 100%);
     border: none;
@@ -221,8 +223,9 @@ main {
 .footerContent {
     width: min(var(--contentWidth), 100%);
     margin: 0 auto 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     gap: 1.25rem;
     padding-bottom: 1.25rem;
@@ -364,7 +367,7 @@ main {
     }
 
     .footerContent {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 1rem;
@@ -395,6 +398,7 @@ main {
 
     .mainHeader {
         gap: 3rem;
+        /* Da mas aire al header en pantallas grandes sin exagerar el espacio. */
         padding: 1.15rem clamp(2rem, 5vw, 3.5rem);
     }
 

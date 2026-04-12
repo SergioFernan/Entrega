@@ -23,10 +23,45 @@
         </nav>
     </header>
     <main class="pageMain">
-        <section class="pageHero">
-            <p class="pageEyebrow">Contacto</p>
-            <h1 class="pageTitle">Hablemos de tu idea y armemos una presencia digital a la altura de tu marca.</h1>
-            <p class="pageDescription">Puedes escribirnos para cotizaciones, colaboraciones o acompanamiento en la construccion visual y estructural de tu sitio web.</p>
+        <section class="contactSection">
+            <div class="contactInfoCard">
+                <p class="contactInfoEyebrow">Primer paso</p>
+                <h2 class="contactInfoTitle">Cuentanos que necesitas y te orientamos mejor.</h2>
+                <p class="contactInfoText">Completa este formulario con la idea general de tu proyecto. Mientras mas claro sea el mensaje, mas facil sera proponerte una solucion adecuada.</p>
+                <div class="contactInfoList">
+                    <p class="contactInfoItem">Respuesta enfocada en tu tipo de servicio.</p>
+                    <p class="contactInfoItem">Acompanamiento para definir el alcance.</p>
+                    <p class="contactInfoItem">Mas claridad para cotizar y comenzar.</p>
+                </div>
+            </div>
+            <form class="contactForm">
+                <div class="formRow">
+                    <label class="formLabel" for="nombre">Nombre</label>
+                    <input class="formInput" type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                </div>
+                <div class="formRow">
+                    <label class="formLabel" for="correo">Correo</label>
+                    <input class="formInput" type="email" id="correo" name="correo" placeholder="tunombre@correo.com">
+                </div>
+                <div class="formRow">
+                    <label class="formLabel" for="servicio">Servicio de interes</label>
+                    <select class="formInput" id="servicio" name="servicio">
+                        <option value="">Selecciona una opcion</option>
+                        <option value="landing-page">Landing Page</option>
+                        <option value="web-corporativa">Web Corporativa</option>
+                        <option value="tienda-virtual">Tienda Virtual</option>
+                    </select>
+                </div>
+                <div class="formRow">
+                    <label class="formLabel" for="presupuesto">Presupuesto estimado</label>
+                    <input class="formInput" type="text" id="presupuesto" name="presupuesto" placeholder="Ej: 1500 USD o 6000000 COP">
+                </div>
+                <div class="formRow formRowFull">
+                    <label class="formLabel" for="mensaje">Mensaje</label>
+                    <textarea class="formInput formTextarea" id="mensaje" name="mensaje" placeholder="Cuentanos de tu idea, objetivo o tipo de negocio."></textarea>
+                </div>
+                <button class="formButton" type="submit">Enviar solicitud</button>
+            </form>
         </section>
     </main>
     <footer class="mainFooter">

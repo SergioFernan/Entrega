@@ -1,66 +1,142 @@
 .pageMain {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
     padding: 0;
 }
 
-.pageHero {
-    width: 100%;
+.contactSection {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.5rem;
     min-height: calc(100vh - 6.75rem);
+    padding: 3rem 1.25rem 4rem;
+    background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
+}
+
+.contactInfoCard,
+.contactForm {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: clamp(3rem, 8vw, 5.5rem) clamp(1.25rem, 6vw, 4.5rem);
-    background: linear-gradient(135deg, rgba(18, 35, 63, 0.96) 0%, rgba(11, 23, 48, 0.96) 100%);
-    border-bottom: 1px solid rgba(133, 165, 255, 0.14);
-    text-align: center;
-    color: #dbe5ff;
+    flex: 1 1 0;
+    max-width: 560px;
+    border-radius: 1.5rem;
+    box-shadow: 0 18px 36px rgba(16, 33, 63, 0.08);
 }
 
-.pageEyebrow {
-    margin-bottom: 0.8rem;
+.contactInfoCard {
+    padding: 2rem;
+    background: linear-gradient(135deg, #12233f 0%, #1b4e9f 100%);
+    color: #f4f8ff;
+}
+
+.contactInfoEyebrow {
+    margin-bottom: 0.85rem;
     font-family: "BebasNeueCustom", sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.12em;
-    color: #8db0ff;
+    font-size: 1rem;
+    letter-spacing: 0.14em;
+    color: #9fc0ff;
 }
 
-.pageTitle {
+.contactInfoTitle {
     max-width: 14ch;
-    margin: 0 auto 1rem;
-    font-size: clamp(2rem, 3vw, 3.35rem);
-    line-height: 1.05;
-    color: #f4f7ff;
+    margin: 0 0 1rem;
+    /* Hace que el titulo cambie de tamano segun la pantalla. */
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1.08;
 }
 
-.pageDescription {
-    max-width: 62ch;
-    margin: 0 auto;
-    font-size: 1.05rem;
+.contactInfoText {
+    margin: 0 0 1.5rem;
     line-height: 1.7;
-    color: #c0d0f8;
+    color: #dbe7ff;
 }
 
-@media (min-width: 1440px) {
-    .pageHero {
-        min-height: calc(100vh - 7.5rem);
-    }
+.contactInfoList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.contactInfoItem {
+    padding: 0.9rem 1rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(173, 197, 255, 0.18);
+}
+
+.contactForm {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.formRow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.formRowFull {
+    margin-bottom: 1.25rem;
+}
+
+.formLabel {
+    margin-bottom: 0.45rem;
+    font-weight: 600;
+    color: #10213f;
+}
+
+.formInput {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border: 1px solid #cddafd;
+    border-radius: 0.9rem;
+    font: inherit;
+    color: #10213f;
+    background-color: #f8fbff;
+}
+
+.formTextarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.formButton {
+    align-self: flex-start;
+    padding: 0.95rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #2e6bff 0%, #1f4fc4 100%);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 @media (max-width: 820px) {
-    .pageHero {
+    .contactSection {
         min-height: auto;
+    }
+
+    .contactSection {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (max-width: 520px) {
-    .pageHero {
-        padding: 3rem 1.25rem;
+    .contactSection {
+        padding: 2rem 1rem 3rem;
     }
 
-    .pageDescription {
-        font-size: 1rem;
+    .contactInfoCard,
+    .contactForm {
+        padding: 1.4rem;
+    }
+
+    .formButton {
+        width: 100%;
     }
 }
