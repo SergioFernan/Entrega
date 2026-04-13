@@ -114,19 +114,18 @@
 .serviceFeatures {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.65rem;
     margin-bottom: 1.75rem;
+    padding-left: 1.2rem;
 }
 
 .serviceFeature {
-    padding: 0.85rem 0.9rem;
-    border-radius: 0.95rem;
-    background-color: #f4f8ff;
+    padding: 0;
     color: #314264;
+    line-height: 1.65;
 }
 
 .serviceCardFeatured .serviceFeature {
-    background-color: rgba(255, 255, 255, 0.1);
     color: #e8f0ff;
 }
 
