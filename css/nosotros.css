@@ -48,26 +48,36 @@
 
 .teamList {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
 }
 
 .teamCard {
     display: flex;
     flex-direction: column;
-    flex: 1 1 290px;
-    max-width: 360px;
-    padding: 2rem;
+    width: min(100%, 860px);
     border-radius: 1.5rem;
     background-color: #ffffff;
     box-shadow: 0 20px 42px rgba(16, 33, 63, 0.08);
     color: #10213f;
+    overflow: hidden;
 }
 
 .teamCardFeatured {
     background: linear-gradient(180deg, #1c67c8 0%, #155bb4 100%);
     color: #f4f8ff;
+}
+
+.teamCardMedia {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 0;
+}
+
+.teamCardMediaFeatured {
+    color: inherit;
 }
 
 .teamBadge {
@@ -76,7 +86,6 @@
     justify-content: center;
     width: 4rem;
     height: 4rem;
-    margin-bottom: 1.2rem;
     border-radius: 50%;
     background: linear-gradient(180deg, #d8e9ff 0%, #bfd9fb 100%);
     color: #2e6bff;
@@ -90,15 +99,55 @@
     color: #f4f8ff;
 }
 
+.teamPhotoPlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    border-radius: 1.2rem;
+    background: linear-gradient(135deg, #dbeaff 0%, #edf4ff 100%);
+    color: #5572a7;
+    font-family: "BebasNeueCustom", sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.teamPhotoPlaceholderFeatured {
+    background: linear-gradient(135deg, rgba(11, 23, 48, 0.52) 0%, rgba(9, 19, 40, 0.78) 100%);
+    color: #dfeaff;
+}
+
+.teamCardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.teamRoleLabel {
+    margin: 0;
+    font-family: "BebasNeueCustom", sans-serif;
+    font-size: 0.98rem;
+    letter-spacing: 0.14em;
+    color: #2e6bff;
+}
+
+.teamRoleLabelFeatured {
+    color: #dce9ff;
+}
+
 .teamRole {
-    margin: 0 0 0.85rem;
-    font-size: 1.55rem;
+    margin: 0;
+    font-size: clamp(1.7rem, 2vw, 2.2rem);
+    line-height: 1.05;
 }
 
 .teamLead {
-    margin: 0 0 1rem;
+    margin: 0;
     line-height: 1.55;
     font-weight: 600;
+    font-size: 1.02rem;
 }
 
 .teamText {
@@ -106,6 +155,7 @@
     line-height: 1.7;
     color: inherit;
     opacity: 0.92;
+    max-width: 62ch;
 }
 
 @media (max-width: 820px) {
@@ -119,7 +169,12 @@
         padding: 2rem 1rem 3rem;
     }
 
+    /* Se reduce el bloque visual para que el espacio reservado para foto siga presente sin dominar la tarjeta en pantallas pequenas. */
+    .teamPhotoPlaceholder {
+        min-height: 180px;
+    }
+
     .teamCard {
-        padding: 1.5rem;
+        width: 100%;
     }
 }
