@@ -99,8 +99,9 @@
 }
 
 .formTextarea {
-    min-height: 150px;
-    resize: vertical;
+    height: 150px;
+    resize: none;
+    overflow-y: auto;
 }
 
 .formButton {
