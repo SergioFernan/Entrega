@@ -2,14 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=html/index.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trinity Developer</title>
-    <script>
-        window.location.replace("html/index.html");
-    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <p>Redirigiendo a <a href="html/index.html">Trinity Developer</a>...</p>
+    <header class="mainHeader">
+        <a class="brandLogo" href="index.html">
+            <img class="brandLogoImage" src="images/logo.svg" alt="Trinity Developer">
+            <span class="brandLogoText">Trinity developer</span>
+        </a>
+        <nav class="headerNav">
+            <ul class="navList">
+                <li class="navItem"><a class="navLink" href="servicios.html">Servicios</a></li>
+                <li class="navItem"><a class="navLink" href="nosotros.html">Nosotros</a></li>
+                <li class="navItem"><a class="navLink" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="pageMain">
+        <section class="pageHero indexHero">
+            <p class="pageEyebrow">Trinity Developer</p>
+            <h1 class="pageTitle">Construimos soluciones digitales claras, modernas y funcionales.</h1>
+            <p class="pageDescription">Explora nuestras secciones para conocer servicios, quienes somos y la mejor forma de contactarnos.</p>
+        </section>
+        <!-- Seccion intermedia con llamada a la accion hacia contacto -->
+        <section class="pageHero contactHighlightSection">
+            <a class="contactHighlightLink" href="contacto.html">
+                <span class="contactHighlightLinkText">Ir a contacto</span>
+                <span class="contactHighlightLinkGlow" aria-hidden="true"></span>
+            </a>
+            <div class="contactHighlightContent">
+                <p class="contactHighlightEyebrow">Conversemos tu idea</p>
+                <h2 class="contactHighlightTitle">Tu proximo proyecto merece una presencia digital que se sienta tan fuerte como tu marca.</h2>
+                <p class="contactHighlightDescription">Si ya tienes una idea en mente o quieres darle una direccion mas clara a tu negocio, estamos listos para ayudarte a convertirla en una experiencia web atractiva, funcional y bien pensada.</p>
+            </div>
+        </section>
+        <section class="pageHero stackSection">
+            <div class="stackIntro">
+                <p class="stackEyebrow">Desarrollo Integral</p>
+                <h2 class="stackTitle">Experiencias web de principio a fin con una base visual fuerte y tecnologia actual.</h2>
+                <p class="stackDescription">Desde la estructura inicial hasta la interactividad final, cada parte del proyecto se trabaja para que el resultado sea claro, atractivo y listo para crecer con tu marca.</p>
+            </div>
+            <div class="stackGrid">
+                <article class="stackCard">
+                    <img class="stackIcon" src="images/iconos main/html5-brands-solid-full.svg" alt="HTML5">
+                    <h3 class="stackCardTitle">HTML5</h3>
+                    <p class="stackCardText">Definimos una estructura ordenada y semantica para que el contenido tenga sentido, claridad y mejor organizacion.</p>
+                </article>
+                <article class="stackCard">
+                    <img class="stackIcon" src="images/iconos main/css3-alt-brands-solid-full.svg" alt="CSS3">
+                    <h3 class="stackCardTitle">CSS3</h3>
+                    <p class="stackCardText">Damos identidad visual con estilos coherentes, composiciones limpias y adaptacion fluida a distintas pantallas.</p>
+                </article>
+                <article class="stackCard">
+                    <img class="stackIcon" src="images/iconos main/square-js-brands-solid-full.svg" alt="JavaScript">
+                    <h3 class="stackCardTitle">JavaScript</h3>
+                    <p class="stackCardText">Agregamos dinamismo e interacciones utiles para que la navegacion se sienta natural, agil y moderna.</p>
+                </article>
+                <article class="stackCard">
+                    <img class="stackIcon" src="images/iconos main/react-brands-solid-full.svg" alt="React">
+                    <h3 class="stackCardTitle">React</h3>
+                    <p class="stackCardText">Desarrollamos interfaces escalables y componentes reutilizables que hacen mas solido cada producto digital.</p>
+                </article>
+            </div>
+        </section>
+        <section class="pageHero plansSection">
+            <div class="plansIntro">
+                <p class="plansEyebrow">Soluciones a tu medida</p>
+                <h2 class="plansTitle">Una solucion <span class="plansTitleAccent">ideal para ti</span></h2>
+                <p class="plansDescription">Sin importar el camino que elijas, cada propuesta esta pensada para que tu marca se vea profesional, funcione con claridad y conecte mejor con tus clientes.</p>
+            </div>
+            <div class="plansGrid">
+                <article class="planCard">
+                    <div class="planIconBadge" aria-hidden="true">LP</div>
+                    <h3 class="planCardTitle">Landing Page</h3>
+                    <p class="planCardLead">Ideal para presentar tu producto o servicio de forma directa.</p>
+                    <p class="planCardText">Creamos una pagina enfocada en conversion, con una estructura clara, un mensaje fuerte y un diseno pensado para captar la atencion desde el primer vistazo.</p>
+                    <a class="planCardLink" href="servicios.html#landing-page">Comprar</a>
+                </article>
+                <article class="planCard planCardFeatured">
+                    <div class="planIconBadge planIconBadgeFeatured" aria-hidden="true">WC</div>
+                    <h3 class="planCardTitle">Web Corporativa</h3>
+                    <p class="planCardLead">Ideal para marcas que quieren comunicar mejor sus servicios.</p>
+                    <p class="planCardText">Desarrollamos un sitio completo con secciones internas, identidad visual consistente y una estructura solida para generar confianza y posicionar tu negocio.</p>
+                    <a class="planCardLink planCardLinkFeatured" href="servicios.html#web-corporativa">Comprar</a>
+                </article>
+                <article class="planCard">
+                    <div class="planIconBadge" aria-hidden="true">TV</div>
+                    <h3 class="planCardTitle">Tienda Virtual</h3>
+                    <p class="planCardLead">Ideal para negocios que quieren vender productos de forma online.</p>
+                    <p class="planCardText">Construimos tu tienda digital con enfoque comercial, fichas de producto claras y una experiencia visual pensada para facilitar compras y transmitir confianza.</p>
+                    <a class="planCardLink" href="servicios.html#tienda-virtual">Comprar</a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="mainFooter">
+        <div class="footerContent">
+        <a class="footerBrand" href="index.html"><img class="footerBrandImage" src="images/logo.svg" alt="Trinity Developer"></a>
+        <div class="footerSocials">
+            <ul class="footerList">
+                <li><a class="footerIconLink" href=""><img class="footerIconImage" src="images/linkedin-brands-solid-full (1).svg" alt="linkedin"></a></li>
+                <li><a class="footerIconLink" href=""><img class="footerIconImage" src="images/github-brands-solid-full.svg" alt="github"></a></li>
+            </ul>
+        </div>
+        <div class="footerContact">
+            <ul class="footerList footerContactList">
+                <li><a class="footerWhatsappLink" href=""><img class="footerWhatsappIcon" src="images/whatsapp-brands-solid-full.svg" alt="whatsapp"></a></li>
+                <li class="footerPhone">cel: +57 311 765 4431</li>
+            </ul>
+        </div>
+        </div>
+        <div class="footerCopy">
+            <p>&copy; 2026 Trinity developer</p>
+        </div>
+    </footer>
 </body>
 </html>
